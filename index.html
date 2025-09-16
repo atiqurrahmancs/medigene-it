@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,82 +11,102 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <script src="tailwind.config.js"></script>
 
-<style>
+  <style>
     @keyframes slideUp {
-    0% { opacity: 0; transform: translateY(-40px); }
-    100% { opacity: 1; transform: translateX(0); }
-  }
+      0% {
+        opacity: 0;
+        transform: translateY(-40px);
+      }
 
-  .animate-slide-up {
-    opacity: 0;
-    animation: slideUp 0.5s ease-out forwards;
-    animation-delay: 0.5s;
-  }
-</style>
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-up {
+      opacity: 0;
+      animation: slideUp 0.5s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+  </style>
 
 </head>
 
 <body class="font-poppins">
   <header class="min-h-screen bg-gradient-to-r from-[#0d4497] via-[#2e6db6] to-[#1E88E5] text-white">
-  <!-- Navbar -->
-  <nav class="sticky top-4 z-50 max-w-7xl mx-auto px-4">
-    <div class="flex items-center justify-between px-6 py-3 bg-white/10 backdrop-blur-md rounded-full shadow-lg">
-      <!-- Logo -->
-      <a href="#" class="text-2xl font-bold tracking-wide">Medigene IT</a>
-      
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-8 font-medium">
-        <li><a href="#home" class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Home</a></li>
-        <li><a href="#features" class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Features</a></li>
-        <li><a href="#pricing" class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Pricing</a></li>
-        <li><a href="#contact" class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Contact</a></li>
-      </ul>
+    <!-- Navbar -->
+    <nav class="sticky top-4 z-50 max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between px-6 py-3 bg-white/10 backdrop-blur-md rounded-full shadow-lg">
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold tracking-wide">Medigene IT</a>
 
-      <!-- CTA -->
-      <a href="#getstarted" class="btn bg-orange-300 btn-primary rounded-full px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">Get Started</a>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-8 font-medium">
+          <li><a href="#home"
+              class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Home</a>
+          </li>
+          <li><a href="#features"
+              class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Features</a>
+          </li>
+          <li><a href="#pricing"
+              class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Pricing</a>
+          </li>
+          <li><a href="#contact"
+              class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Contact</a>
+          </li>
+        </ul>
 
-      <!-- Mobile Menu Button -->
-      <button class="md:hidden btn btn-ghost bg-orange-300 btn-circle text-blue-950 border-none" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
+        <!-- CTA -->
+        <a href="#getstarted"
+          class="btn bg-orange-300 btn-primary rounded-full px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">Get
+          Started</a>
 
-    <!-- Mobile Dropdown -->
-    <div id="mobileMenu" class="hidden mt-2 bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 shadow-lg md:hidden">
-      <ul class="space-y-4">
-        <li><a href="#home" class="block">Home</a></li>
-        <li><a href="#features" class="block">Features</a></li>
-        <li><a href="#pricing" class="block">Pricing</a></li>
-        <li><a href="#contact" class="block">Contact</a></li>
-        <li><a href="#getstarted" class="btn btn-primary bg-orange-300 w-full rounded-full text-blue-950 border-none">Get Started</a></li>
-      </ul>
-    </div>
-  </nav>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden btn btn-ghost bg-orange-300 btn-circle text-blue-950 border-none"
+          onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown -->
+      <div id="mobileMenu" class="hidden mt-2 bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 shadow-lg md:hidden">
+        <ul class="space-y-4">
+          <li><a href="#home" class="block">Home</a></li>
+          <li><a href="#features" class="block">Features</a></li>
+          <li><a href="#pricing" class="block">Pricing</a></li>
+          <li><a href="#contact" class="block">Contact</a></li>
+          <li><a href="#getstarted"
+              class="btn btn-primary bg-orange-300 w-full rounded-full text-blue-950 border-none">Get Started</a></li>
+        </ul>
+      </div>
+    </nav>
 
 
-  <!-- Hero with Background Video -->
-  <section id="home" class="relative mt-40 mb-10 flex items-center justify-center text-center overflow-hidden">
-   
-    <div class="relative z-10 max-w-3xl px-6">
-      <h1 id="headline" class="text-5xl md:text-6xl font-bold leading-tight mb-6 
+    <!-- Hero with Background Video -->
+    <section id="home" class="relative mt-40 mb-10 flex items-center justify-center text-center overflow-hidden">
+
+      <div class="relative z-10 max-w-3xl px-6">
+        <h1 id="headline" class="text-5xl md:text-6xl font-bold leading-tight mb-6 
                  bg-gradient-to-r from-[#59d18b] via-[#ecb372] to-[#73fae8] 
                  bg-clip-text text-transparent animate-gradient-x bg-[length:150%_150%]">
-        Power Your Business with Smart Solutions
-      </h1>
-      <p id="head-tag" class="text-lg text-gray-200 mb-8">
-        We build modern web & mobile applications to power your business.
-      </p>
-      <div class="space-x-4">
-        <a href="#getstarted" class="btn hover:bg-indigo-500 hover:text-white bg-orange-300 text-blue-950 border-none rounded-full px-8">Get Started</a>
-        <a href="#features" class="btn btn-outline rounded-full px-8 text-white">Learn More</a>
+          Power Your Business with Smart Solutions
+        </h1>
+        <p id="head-tag" class="text-lg text-gray-200 mb-8">
+          We build modern web & mobile applications to power your business.
+        </p>
+        <div class="space-x-4">
+          <a href="#getstarted"
+            class="btn hover:bg-indigo-500 hover:text-white bg-orange-300 text-blue-950 border-none rounded-full px-8">Get
+            Started</a>
+          <a href="#features" class="btn btn-outline rounded-full px-8 text-white">Learn More</a>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- statistics -->
-  <div class="flex flex-col lg:flex-row items-center justify-center pb-20">
+    </section>
+    <!-- statistics -->
+    <div class="flex flex-col lg:flex-row items-center justify-center pb-20">
       <div class="card p-10 text-center">
         <div class="text-3xl sm:text-4xl text-yellow-200 mb-2">🤝</div>
         <p id="counter-partner" class="text-5xl font-extrabold text-yellow-200"></p>
@@ -104,365 +125,395 @@
         <h2 class="text-2xl font-bold mb-4">Projects Completed</h2>
       </div>
     </div>
-</header>
+  </header>
 
-<main>
-<section id="why-choose-us" class="bg-gray-50 py-20">
-  <div class="max-w-7xl mx-auto px-6 text-center">
+  <main>
+    <section id="why-choose-us" class="bg-gray-50 py-20">
+      <div class="max-w-7xl mx-auto px-6 text-center">
 
-    <!-- Headline -->
-    <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-slide-up" style="animation-delay: 0s;">
-      Why Choose Us
-    </h2>
+        <!-- Headline -->
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-slide-up" style="animation-delay: 0s;">
+          Why Choose Us
+        </h2>
 
-    <!-- Paragraph -->
-    <p class="text-gray-600 text-lg md:text-xl mb-8 animate-slide-up" style="animation-delay: 0.2s;">
-      We provide modern IT solutions to boost your business efficiency and growth.
-    </p>
-
-
-    <!-- Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
-        <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up" style="animation-delay: 0.6s;">
-        <i class="fa-solid fa-globe text-5xl text-blue-600 mb-4 hover:rotate-45"></i>
-        <h3 class="text-xl font-semibold mb-2">Global Connectivity</h3>
-        <p class="text-gray-600">Direct routes to global networks for low latency and high performance.</p>
-      </div>
-      </div>
-
-      <div class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
-        <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up" style="animation-delay: 0.8s;">
-        <div class="text-4xl sm:text-5xl text-blue-600 mb-3 sm:mb-4 hover:rotate-45">🛡️</div>
-        <h3 class="text-xl font-semibold mb-2">Reliability & Uptime</h3>
-        <p class="text-gray-600">24/7 monitoring and redundant infrastructure for maximum uptime.</p>
-      </div>
-      </div>
-
-      <div class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
-        <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up" style="animation-delay: 1s;">
-        <div class="text-4xl sm:text-5xl text-blue-600 mb-3 sm:mb-4 hover:rotate-45">💰</div>
-        <h3 class="text-xl font-semibold mb-2">Cost-Effective Solutions</h3>
-        <p class="text-gray-600">Optimize costs without sacrificing speed, reliability, or quality.</p>
-      </div>
-    </div>
-      </div>
-  </div>
-</section>
-
-<section>
-  <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
-              rounded-xl bg-white p-6">
-    <div class="animate-slide-up flex flex-col lg:flex-row rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
-      <div class="w-1/2">
-        <img src="./images/app-dev (2).png" />
-      </div>
-      <div class="text-center flex flex-col items-center py-5">
-        <h2 class="text-2xl font-semibold text-center my-5">Web Development</h2>
-        <p>Modern, responsive websites built with cutting-edge technologies</p>
-        <p class="text-slate-500 text-center my-4">Custom web applications that scale with your business needs</p>
-        <div>
-          <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
-            <li>React</li>
-            <li>Next.js</li>
-            <li>TypeScript</li>
-            <li>Tailwind CSS</li>
-          </ol>
-        </div>
-        <a href="#getstarted" class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See Details</a>
-      </div>
-    </div>
-  </div>
-
-<div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
-              rounded-xl bg-white p-6">
-    <div class="animate-slide-up flex flex-col justify-center lg:flex-row-reverse rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
-      <div class="w-1/2 flex justify-center">
-        <img src="./images/app-dev (1).png" />
-      </div>
-      <div class="text-center flex flex-col items-center py-5">
-        <h2 class="text-2xl font-semibold text-center my-5">Mobile Application Development</h2>
-        <p>Native and cross-platform mobile apps for iOS and Android</p>
-        <p class="text-slate-500 text-center my-4">Engaging mobile experiences that connect with your users</p>
-        <div>
-          <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
-            <li>React Native</li>
-            <li>Flutter</li>
-            <li>Swift</li>
-            <li>Kotlin</li>
-          </ol>
-        </div>
-        <a href="#getstarted" class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See Details</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
-              rounded-xl bg-white p-6">
-    <div class="animate-slide-up flex flex-col lg:flex-row rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
-      <div class="w-[40%]">
-        <img src="./images/api.png" />
-      </div>
-      <div class="text-center flex flex-col items-center py-5">
-        <h2 class="text-2xl font-semibold text-center my-5">API Development</h2>
-        <p>RESTful and GraphQL APIs for seamless data integration</p>
-        <p class="text-slate-500 text-center my-4">Robust backend systems that power your applications</p>
-        <div>
-          <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
-            <li>Node.js</li>
-            <li>GraphQL</li>
-            <li>REST</li>
-            <li>MongoDB</li>
-          </ol>
-        </div>
-        <a href="#getstarted" class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See Details</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
-              rounded-xl bg-white p-6">
-    <div class="animate-slide-up flex flex-col justify-center lg:flex-row-reverse rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
-      <div class="w-1/2 flex justify-center">
-        <img src="./images/ui.png" />
-      </div>
-      <div class="text-center flex flex-col items-center py-5">
-        <h2 class="text-2xl font-semibold text-center my-5">UI/UX Design</h2>
-        <p>User-centered design that converts visitors into customers</p>
-        <p class="text-slate-500 text-center my-4">Beautiful interfaces that enhance user experience</p>
-        <div>
-          <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
-            <li>Figma</li>
-            <li>Adobe XD</li>
-            <li>Sketch</li>
-            <li>Prototyping</li>
-          </ol>
-        </div>
-        <a href="#getstarted" class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See Details</a>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Paragraph -->
+        <p class="text-gray-600 text-lg md:text-xl mb-8 animate-slide-up" style="animation-delay: 0.2s;">
+          We provide modern IT solutions to boost your business efficiency and growth.
+        </p>
 
 
-<div class="animate-slide-up bg-white rounded-2xl p-6 sm:p-8 shadow-lg mx-10 lg:mx-80 my-10">
-  <h3 class="animate-slide-up text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-gray-900">Additional Services</h3>
-    <div class="animate-slide-up flex flex-col lg:flex-row justify-around gap-4 sm:gap-6">
-            <div class="text-center transition-transform duration-300 hover:scale-105">
-              <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🔧</div>
-              <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Maintenance</h4>
-              <p class="text-xs sm:text-sm text-gray-600">$299/month</p>
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
+            <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up"
+              style="animation-delay: 0.6s;">
+              <i class="fa-solid fa-globe text-5xl text-blue-600 mb-4 hover:rotate-45"></i>
+              <h3 class="text-xl font-semibold mb-2">Global Connectivity</h3>
+              <p class="text-gray-600">Direct routes to global networks for low latency and high performance.</p>
             </div>
-            <div class="text-center transition-transform duration-300 hover:scale-105">
-              <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">📊</div>
-              <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Analytics Setup</h4>
-              <p class="text-xs sm:text-sm text-gray-600">$499 one-time</p>
+          </div>
+
+          <div
+            class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
+            <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up"
+              style="animation-delay: 0.8s;">
+              <div class="text-4xl sm:text-5xl text-blue-600 mb-3 sm:mb-4 hover:rotate-45">🛡️</div>
+              <h3 class="text-xl font-semibold mb-2">Reliability & Uptime</h3>
+              <p class="text-gray-600">24/7 monitoring and redundant infrastructure for maximum uptime.</p>
             </div>
-            <div class="text-center transition-transform duration-300 hover:scale-105">
-              <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🚀</div>
-              <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Performance Audit</h4>
-              <p class="text-xs sm:text-sm text-gray-600">$799 one-time</p>
-            </div>
-            <div class="text-center transition-transform duration-300 hover:scale-105">
-              <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🎓</div>
-              <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Training</h4>
-              <p class="text-xs sm:text-sm text-gray-600">$199/hour</p>
+          </div>
+
+          <div
+            class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
+            <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up"
+              style="animation-delay: 1s;">
+              <div class="text-4xl sm:text-5xl text-blue-600 mb-3 sm:mb-4 hover:rotate-45">💰</div>
+              <h3 class="text-xl font-semibold mb-2">Cost-Effective Solutions</h3>
+              <p class="text-gray-600">Optimize costs without sacrificing speed, reliability, or quality.</p>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-  <section>
-    <div class="py-12 sm:py-16 lg:py-20 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="animate-slide-up text-center mb-12 sm:mb-16">
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-900">Get In Touch</h2>
-          <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            Ready to start your project? Let's discuss how we can help bring your vision to life.
-          </p>
+    <section>
+      <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
+              rounded-xl bg-white p-6">
+        <div
+          class="animate-slide-up flex flex-col lg:flex-row rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
+          <div class="w-1/2">
+            <img src="./images/app-dev (2).png" />
+          </div>
+          <div class="text-center flex flex-col items-center py-5">
+            <h2 class="text-2xl font-semibold text-center my-5">Web Development</h2>
+            <p>Modern, responsive websites built with cutting-edge technologies</p>
+            <p class="text-slate-500 text-center my-4">Custom web applications that scale with your business needs</p>
+            <div>
+              <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
+                <li>React</li>
+                <li>Next.js</li>
+                <li>TypeScript</li>
+                <li>Tailwind CSS</li>
+              </ol>
+            </div>
+            <a href="#getstarted"
+              class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See
+              Details</a>
+          </div>
         </div>
+      </div>
 
-        <!-- get in touch content -->
-         <div class="flex flex-col lg:flex-row justify-center">
-                  <!-- form -->
-        <div class="animate-slide-up grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mt-5 lg:mt-1">
-          <div class="shadow-xl border-0 p-8 border-2 rounded-lg">
-            <h1 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">Send us a message</h1>
-            <p id="feed-back" class="text-sm sm:text-base hidden">We'll get back to you within 24 hours</p>
+      <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
+              rounded-xl bg-white p-6">
+        <div
+          class="animate-slide-up flex flex-col justify-center lg:flex-row-reverse rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
+          <div class="w-1/2 flex justify-center">
+            <img src="./images/app-dev (1).png" />
+          </div>
+          <div class="text-center flex flex-col items-center py-5">
+            <h2 class="text-2xl font-semibold text-center my-5">Mobile Application Development</h2>
+            <p>Native and cross-platform mobile apps for iOS and Android</p>
+            <p class="text-slate-500 text-center my-4">Engaging mobile experiences that connect with your users</p>
+            <div>
+              <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
+                <li>React Native</li>
+                <li>Flutter</li>
+                <li>Swift</li>
+                <li>Kotlin</li>
+              </ol>
+            </div>
+            <a href="#getstarted"
+              class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See
+              Details</a>
+          </div>
+        </div>
+      </div>
 
-            <form class="space-y-4 sm:space-y-6">
-            <div class="flex flex-col lg:flex-row gap-4 my-3">
-              <div class="flex flex-col lg:flex-col lg:w-1/2">
-                <p>Full Name*</p>
-                <input id="sender" type="text" class="p-2 text-sm sm:text-base border-2 rounded-md border-slate-200 h-10">
+      <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
+              rounded-xl bg-white p-6">
+        <div
+          class="animate-slide-up flex flex-col lg:flex-row rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
+          <div class="w-[40%]">
+            <img src="./images/api.png" />
+          </div>
+          <div class="text-center flex flex-col items-center py-5">
+            <h2 class="text-2xl font-semibold text-center my-5">API Development</h2>
+            <p>RESTful and GraphQL APIs for seamless data integration</p>
+            <p class="text-slate-500 text-center my-4">Robust backend systems that power your applications</p>
+            <div>
+              <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
+                <li>Node.js</li>
+                <li>GraphQL</li>
+                <li>REST</li>
+                <li>MongoDB</li>
+              </ol>
+            </div>
+            <a href="#getstarted"
+              class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See
+              Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
+              rounded-xl bg-white p-6">
+        <div
+          class="animate-slide-up flex flex-col justify-center lg:flex-row-reverse rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
+          <div class="w-1/2 flex justify-center">
+            <img src="./images/ui.png" />
+          </div>
+          <div class="text-center flex flex-col items-center py-5">
+            <h2 class="text-2xl font-semibold text-center my-5">UI/UX Design</h2>
+            <p>User-centered design that converts visitors into customers</p>
+            <p class="text-slate-500 text-center my-4">Beautiful interfaces that enhance user experience</p>
+            <div>
+              <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
+                <li>Figma</li>
+                <li>Adobe XD</li>
+                <li>Sketch</li>
+                <li>Prototyping</li>
+              </ol>
+            </div>
+            <a href="#getstarted"
+              class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See
+              Details</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="animate-slide-up bg-white rounded-2xl p-6 sm:p-8 shadow-lg mx-10 lg:mx-80 my-10">
+      <h3 class="animate-slide-up text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-gray-900">Additional
+        Services</h3>
+      <div class="animate-slide-up flex flex-col lg:flex-row justify-around gap-4 sm:gap-6">
+        <div class="text-center transition-transform duration-300 hover:scale-105">
+          <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🔧</div>
+          <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Maintenance</h4>
+          <p class="text-xs sm:text-sm text-gray-600">$299/month</p>
+        </div>
+        <div class="text-center transition-transform duration-300 hover:scale-105">
+          <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">📊</div>
+          <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Analytics Setup</h4>
+          <p class="text-xs sm:text-sm text-gray-600">$499 one-time</p>
+        </div>
+        <div class="text-center transition-transform duration-300 hover:scale-105">
+          <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🚀</div>
+          <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Performance Audit</h4>
+          <p class="text-xs sm:text-sm text-gray-600">$799 one-time</p>
+        </div>
+        <div class="text-center transition-transform duration-300 hover:scale-105">
+          <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🎓</div>
+          <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Training</h4>
+          <p class="text-xs sm:text-sm text-gray-600">$199/hour</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <section>
+      <div class="py-12 sm:py-16 lg:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="animate-slide-up text-center mb-12 sm:mb-16">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-900">Get In Touch</h2>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+              Ready to start your project? Let's discuss how we can help bring your vision to life.
+            </p>
+          </div>
+
+          <!-- get in touch content -->
+          <div class="grid lg:grid-cols-2 justify-center gap-x-10">
+            <!-- form -->
+            <div
+              class="animate-slide-up shadow-xl border-2 rounded-lg col-span-1 gap-8 flex flex-col lg:flex-row sm:gap-12 mt-5 lg:mt-1">
+              <div class="w-full p-8">
+                <h1 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">Send us a message</h1>
+                <p id="feed-back" class="text-sm sm:text-base hidden">We'll get back to you within 24 hours</p>
+
+                <form class="space-y-4 sm:space-y-6">
+                  <div class="flex flex-col lg:flex-row gap-4 my-3">
+                    <div class="flex flex-col lg:flex-col lg:w-1/2">
+                      <p>Full Name*</p>
+                      <input id="sender" type="text"
+                        class="p-2 text-sm sm:text-base border-2 rounded-md border-slate-200 h-10">
+                    </div>
+
+                    <div class="flex flex-col lg:flex-col lg:w-1/2">
+                      <p>Email</p>
+                      <input id="sender-mail" type="email"
+                        class="p-2 text-sm sm:text-base border-2 rounded-md border-slate-200 h-10">
+
+                    </div>
+
+                  </div>
+                  <div>
+                    <h3>Company (Optional)</h3>
+                    <input id="sender-company" type="text"
+                      class="p-2 w-full h-10 text-sm sm:text-base border-2 rounded-md border-slate-200">
+                  </div>
+
+                  <div>
+                    <h3>Message*</h3>
+                    <textarea id="sender-message"
+                      class="p-2 w-full h-32 border-2 rounded-md border-slate-200 text-sm sm:text-base"></textarea>
+                  </div>
+
+                  <button id="send-message" type="submit"
+                    class="w-full bg-gradient-to-r from-[#0d4497] to-[#1E88E5] hover:from-[#0a3a7a] hover:to-[#1976D2] text-white py-2 sm:py-3 text-base sm:text-lg rounded-xl">Send
+                    Message</button>
+
+                  <div id="feedback"></div>
+                </form>
               </div>
-              
-              <div class="flex flex-col lg:flex-col lg:w-1/2">
-                <p>Email</p>
-                <input id="sender-mail" type="email" class="p-2 text-sm sm:text-base border-2 rounded-md border-slate-200 h-10">
-                
+
+            </div>
+
+            <div class="animate-slide-up shadow-xl border-2 rounded-lg col-span-1 flex justify-center mt-5 lg:mt-1">
+              <div class="px-16 w-full py-8">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">Contact Information</h3>
+                <p class="text-sm sm:text-base my-2 text-center">Reach out to us</p>
+
+                <div class="grid grid-cols-1 gap-y-3 pt-2">
+                  <div class="flex flex-row gap-2 items-start ">
+                    <i class="fa-solid fa-square-envelope text-blue-900 text-2xl"></i>
+                    <div>
+                      <p>Email</p>
+                      <p>hello@medigeneit.com</p>
+                      <p>support@medigeneit.com</p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row gap-2 items-start mt-4">
+                    <i class="fa-solid fa-square-phone text-blue-900 text-2xl"></i>
+                    <div>
+                      <p>Contact Number</p>
+                      <p>01712260211</p>
+                      <p>01713459946</p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row gap-2 items-start mt-4">
+                    <i class="fa-solid fa-location-dot text-blue-900 text-2xl"></i>
+                    <div>
+                      <p>Location</p>
+                      <p>164, Meher Tower, Sonargaon Road.</p>
+                      <p>Dhaka, Bangladesh.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-row gap-2 items-start mt-4">
+                    <i class="fa-solid fa-clock text-blue-900 text-2xl"></i>
+                    <div>
+                      <p>Business Hour</p>
+                      <p>Sunday - Thursday</p>
+                      <p>09:00 AM - 07:00 PM</p>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
-
-            </div>
-            <div>
-            <h3>Company (Optional)</h3>
-            <input id="sender-company" type="text" class="p-2 w-full h-10 text-sm sm:text-base border-2 rounded-md border-slate-200">
-            </div>
-
-            <div>
-              <h3>Message*</h3>
-            <textarea id="sender-message" class="p-2 w-full h-32 border-2 rounded-md border-slate-200 text-sm sm:text-base"></textarea>
-            </div>
-
-            <button id="send-message" type="submit" class="w-full bg-gradient-to-r from-[#0d4497] to-[#1E88E5] hover:from-[#0a3a7a] hover:to-[#1976D2] text-white py-2 sm:py-3 text-base sm:text-lg rounded-xl">Send Message</button>
-            
-            <div id="feedback"></div>
-          </form>
-          </div>
-
-        </div>
-
-        <div class="animate-slide-up">
-          <div class="shadow-xl border-0 p-8 border-2 rounded-lg mt-5 lg:mt-1">
-            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 text-center">Contact Information</h3>
-            <p class="text-sm sm:text-base my-2 text-center">Reach out to us</p>
-
-          <div class="flex flex-row gap-2 items-start">
-            <i class="fa-solid fa-square-envelope text-blue-900 text-2xl"></i>
-            <div>
-              <p>Email</p>
-              <p>hello@medigeneit.com</p>
-              <p>support@medigeneit.com</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row gap-2 items-start mt-4">
-            <i class="fa-solid fa-square-phone text-blue-900 text-2xl"></i>
-            <div>
-              <p>Contact Number</p>
-              <p>01712260211</p>
-              <p>01713459946</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row gap-2 items-start mt-4">
-            <i class="fa-solid fa-location-dot text-blue-900 text-2xl"></i>
-            <div>
-              <p>Location</p>
-              <p>164, Meher Tower, Sonargaon Road.</p>
-              <p>Dhaka, Bangladesh.</p>
-            </div>
-          </div>
-
-          <div class="flex flex-row gap-2 items-start mt-4">
-            <i class="fa-solid fa-clock text-blue-900 text-2xl"></i>
-            <div>
-              <p>Business Hour</p>
-              <p>Sunday - Thursday</p>
-              <p>09:00 AM - 07:00 PM</p>
             </div>
           </div>
 
         </div>
-      </div>
-    </div>
 
       </div>
 
-    </div>
-    
-  </section>
+    </section>
 
 
 
 
 
-</main>
+  </main>
 
-        <footer class="animate-slide-up mt-16 sm:mt-20 pt-8 sm:pt-12 border-t border-gray-200 max-w-7xl mx-auto px-4 sm:px-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
-            <div class="sm:col-span-2 lg:col-span-1">
-              <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Medigene IT</h3>
-              <p class="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
-                Empowering businesses with innovative technology solutions since 2017.
-              </p>
-          <div class="flex flex-row gap-3">
-            <a><i class="fa-brands fa-square-facebook text-xl"></i></a>
-            <a><i class="fa-brands fa-linkedin text-xl"></i></a>
-            <a><i class="fa-brands fa-instagram text-xl"></i></a>
-            <a><i class="fa-regular fa-envelope text-xl"></i></a>
-          </div>
+  <footer class="animate-slide-up mt-16 sm:mt-20 pt-8 sm:pt-12 border-t border-gray-200 max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+      <div class="sm:col-span-2 lg:col-span-1">
+        <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Medigene IT</h3>
+        <p class="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
+          Empowering businesses with innovative technology solutions since 2017.
+        </p>
+        <div class="flex flex-row gap-3">
+          <a><i class="fa-brands fa-square-facebook text-xl"></i></a>
+          <a><i class="fa-brands fa-linkedin text-xl"></i></a>
+          <a><i class="fa-brands fa-instagram text-xl"></i></a>
+          <a><i class="fa-regular fa-envelope text-xl"></i></a>
         </div>
+      </div>
 
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Services</h4>
-              <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
-                <li>Web Development</li>
-                <li>Mobile Apps</li>
-                <li>Cloud Solutions</li>
-                <li>UI/UX Design</li>
-              </ul>
-            </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Services</h4>
+        <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
+          <li>Web Development</li>
+          <li>Mobile Apps</li>
+          <li>Cloud Solutions</li>
+          <li>UI/UX Design</li>
+        </ul>
+      </div>
 
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Company</h4>
-              <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
-                <li>About Us</li>
-                <li>Our Team</li>
-                <li>Careers</li>
-                <li>Blog</li>
-              </ul>
-            </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Company</h4>
+        <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
+          <li>About Us</li>
+          <li>Our Team</li>
+          <li>Careers</li>
+          <li>Blog</li>
+        </ul>
+      </div>
 
-            <div>
-              <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Support</h4>
-              <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
-                <li>Help Center</li>
-                <li>Documentation</li>
-                <li>Privacy Policy</li>
-                <li>Terms of Service</li>
-              </ul>
-            </div>
-          </div>
+      <div>
+        <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Support</h4>
+        <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
+          <li>Help Center</li>
+          <li>Documentation</li>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+        </ul>
+      </div>
+    </div>
 
-          <div class="border-t mb-4 border-gray-200 pt-6 sm:pt-8 text-center text-gray-600 text-sm sm:text-base">
-            <p>&copy; 2024 Medigene IT. All rights reserved.</p>
-          </div>
-        </footer>
-        
-<script>
-  let count = 0;
-  const counterEl = document.getElementById("counter");
-  const counter = setInterval(() => {
-    counterEl.textContent = ++count;
-    if (count === 100){
-      clearInterval(counter);
-      counterEl.textContent = count + "+"; 
-    }
-  }, 20);
+    <div class="border-t mb-4 border-gray-200 pt-6 sm:pt-8 text-center text-gray-600 text-sm sm:text-base">
+      <p>&copy; 2024 Medigene IT. All rights reserved.</p>
+    </div>
+  </footer>
 
-  let counT = 0;
-  const counTerEl = document.getElementById("counter-partner");
-  const counTer = setInterval(() => {
-    counTerEl.textContent = ++counT;
-    if (counT == 20){
-      clearInterval(counTer);
-      counTerEl.textContent = counT + "+"; 
-    }
-  }, 60);
+  <script>
+    let count = 0;
+    const counterEl = document.getElementById("counter");
+    const counter = setInterval(() => {
+      counterEl.textContent = ++count;
+      if (count === 100) {
+        clearInterval(counter);
+        counterEl.textContent = count + "+";
+      }
+    }, 20);
 
-  let couNT = 0;
-  const couNTerEl = document.getElementById("counter-experience");
-  const couNTer = setInterval(() => {
-    couNTerEl.textContent = ++couNT;
-    if (couNT >= 7){
-      clearInterval(couNTer);
-      couNTerEl.textContent = couNT + "+"; 
-    }
-  }, 60);
+    let counT = 0;
+    const counTerEl = document.getElementById("counter-partner");
+    const counTer = setInterval(() => {
+      counTerEl.textContent = ++counT;
+      if (counT == 20) {
+        clearInterval(counTer);
+        counTerEl.textContent = counT + "+";
+      }
+    }, 60);
+
+    let couNT = 0;
+    const couNTerEl = document.getElementById("counter-experience");
+    const couNTer = setInterval(() => {
+      couNTerEl.textContent = ++couNT;
+      if (couNT >= 7) {
+        clearInterval(couNTer);
+        couNTerEl.textContent = couNT + "+";
+      }
+    }, 60);
 
 
-</script>
-<script src="./js/main.js"></script>
+  </script>
+  <script src="./js/main.js"></script>
 </body>
+
 </html>
