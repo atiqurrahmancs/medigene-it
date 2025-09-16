@@ -1,392 +1,420 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/png" href="./images/logo.png">
-   <title>Medigene IT</title>
-   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medigene IT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="tailwind.config.js"></script>
+
+<style>
+    @keyframes slideUp {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  .animate-slide-up {
+    opacity: 0;
+    animation: slideUp 0.5s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+</style>
+
 </head>
-<body>
-   <header class="bg-url[https://themewagon.github.io/brainwave-io/v1.0.0/assets/img/illustrations/BG.webp]">
-   <!-- Navbar -->
-   <div class="navbar bg-gradient-to-r from-[#0D47A1] via-[#2e6db6] to-[#1E88E5] text-white sticky top-0 z-50">
-      <!-- Navbar Start (Logo + Mobile Menu) -->
-      <div class="navbar-start">
-         <!-- Mobile Dropdown -->
-         <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </div>
 
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#596789] text-white rounded-box w-52">
-               <li><a class=">Home</a></li>
-               <li><a class="hover:text-blue-400 transition">About</a></li>
-               <li><a class="hover:text-blue-400 transition">Services</a></li>
-               <li><a class="hover:text-blue-400 transition">Products</a></li>
-               <li><a class="hover:text-blue-400 transition">Portfolio</a></li>
-               <li><a class="hover:text-blue-400 transition">Contact</a></li>
-            </ul>
-         </div>
-
+<body class="font-poppins">
+  <header class="min-h-screen bg-gradient-to-r from-[#0d4497] via-[#2e6db6] to-[#1E88E5] text-white">
+  <!-- Navbar -->
+  <nav class="sticky top-4 z-50 max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between px-6 py-3 bg-white/10 backdrop-blur-md rounded-full shadow-lg">
       <!-- Logo -->
-         <a href="index.html" class="flex items-center gap-2 text-xl font-bold">
-            <img src="./images/logo.png" alt="Medigene IT Logo" class="w-10 ml-10">
-            <span>Medigene IT</span>
-         </a>
-      </div>
+      <a href="#" class="text-2xl font-bold tracking-wide">Medigene IT</a>
+      
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 font-medium">
+        <li><a href="#home" class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Home</a></li>
+        <li><a href="#features" class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Features</a></li>
+        <li><a href="#pricing" class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Pricing</a></li>
+        <li><a href="#contact" class="hover:text-[#f3ca70] hover:tab-content hover:g-white/8 hover:border-base-300 hover:p-4 hover:rounded-xl hover:shadow-xl ease-in-outout">Contact</a></li>
+      </ul>
 
-      <!-- Navbar Center (Desktop Menu) -->
-      <div class="navbar-center hidden lg:flex">
-         <ul class="menu menu-horizontal px-1">
-            <li><a href="./index.html" class="hover:text-blue-400 transition">Home</a></li>
-            <li><a href="./about.html" class="hover:text-blue-400 transition">About</a></li>
-            <li><a href="./service.html" class="hover:text-blue-400 transition">Services</a></li>
-            <li><a href="./product.html" class="hover:text-blue-400 transition">Products</a></li>
-            <li><a href="./team.html" class="hover:text-blue-400 transition">Teams</a></li>
-            <li><a href="./contact.html" class="hover:text-blue-400 transition">Contact</a></li>
-         </ul>
-      </div>
+      <!-- CTA -->
+      <a href="#getstarted" class="btn bg-orange-300 btn-primary rounded-full px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">Get Started</a>
 
-      <!-- Navbar End (Button) -->
-      <div class="navbar-end">
-         <a class="btn bg-gradient-to-r from-[#FF6B6B] via-[#FF8E53] to-[#FFB74D]
- text-white rounded-full px-6 border-0 hover:opacity-90 transition mr-10">Get Quote
-         </a>
-      </div>
-   </div>
-
-   <!-- Hero Section -->
-   <section class="bg-gradient-to-r from-[#0D47A1] via-[#1565C0] to-[#1E88E5] text-white flex flex-col lg:flex-row justify-around items-center">
-      <!-- Left Content -->
-      <div class="max-w-7xl mx-auto px-5 lg:px-10 py-24 flex flex-col items-center lg:items-start text-center lg:text-left">
-    
-         <!-- Headline -->
-         <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 opacity-0 translate-y-5 transition-all duration-1000 ease-out" onload="this.classList.remove('opacity-0','translate-y-5')">Driving Innovation. 
-         <br class="hidden md:block"> Delivering Solutions.
-         </h1>
-
-         <!-- Short text -->
-         <p class="text-base md:text-lg lg:text-xl text-gray-200 max-w-2xl mb-10
-         opacity-0 translate-y-5 transition-all duration-1000 ease-out delay-200" onload="this.classList.remove('opacity-0','translate-y-5')">We build modern web & mobile applications to power your business.
-         </p>
-
-       <!-- Buttons -->
-         <div class="flex flex-col sm:flex-row gap-4 opacity-0 translate-y-5 transition-all duration-1000 ease-out delay-500" onload="this.classList.remove('opacity-0','translate-y-5')">
-            <a href="#contact" class="btn bg-white text-blue-700 font-semibold border-0 px-8 rounded-full hover:bg-gray-200 transition">Get Started
-            </a>
-            <a href="#portfolio" class="btn bg-transparent border border-white px-8 rounded-full hover:bg-white hover:text-blue-800 transition text-white">See Our Work
-            </a>
-         </div>
-      </div>
-
-      <!-- Right Image -->
-      <div class="mr-5 lg:mr-20 hidden lg:block opacity-0 translate-x-5 transition-all duration-1500 ease-out delay-700" onload="this.classList.remove('opacity-0','translate-x-5')">
-         <img src="./images/hero.png" alt="Hero Illustration" class="w-[200px] lg:w-[700px] max-w-full">
-      </div>
-   </section>
-   </header>
-
-   <main>
-
-            <section class="py-16 bg-base-100">
-         <div class="container mx-auto max-w-7xl px-4">
-            <div class="text-center mb-10">
-               <h2 class="text-3xl sm:text-4xl font-bold text-[#0D47A1]">Our Services</h2>
-               <p class="text-base opacity-70">Smart Design, Updated Technology, Robust Performance</p>
-            </div>
-
-    <div class="relative overflow-hidden">
-      <!-- Left Arrow -->
-      <button id="prev">
-      </button>
-
-      <!-- Slider Track -->
-      <div id="track" class="flex transition-transform duration-700 ease-in-out">
-        
-        <!-- Card 1 -->
-        <div class="flex-none w-full sm:w-1/2 lg:w-1/3 px-3">
-          <div class="h-full bg-slate-200 duration-300 hover:scale-95 hover:shadow-xl hover:bg-red-100 rounded-2xl hover:rounded-xl">
-            <div class="card-body items-center text-center p-8">
-               <!-- Icon / Image -->
-               <div class="w-50 h-50 flex items-center justify-center rounded-full bg-primary/10 mb-2">
-                  <img src="./images/app-dev (2).png" alt="">
-               </div>
-               <!-- Title -->
-               <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-               <!-- Description -->
-               <p class="text-gray-500 text-sm leading-relaxed">Clean, scalable and robust web solutions for modern businesses.
-               </p>
-            </div>
-         </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="flex-none w-full sm:w-1/2 lg:w-1/3 px-3">
-          <div class="h-full bg-slate-200 duration-300 hover:scale-95 hover:shadow-xl hover:bg-red-100 rounded-2xl hover:rounded-xl">
-            <div class="card-body items-center text-center p-8">
-               <!-- Icon / Image -->
-               <div class="w-50 h-50 flex items-center justify-center rounded-full bg-primary/10 mb-2 ">
-                  <img src="./images/app-dev (1).png" alt="">
-               </div>
-               <!-- Title -->
-               <h3 class="text-xl font-semibold mb-2">Mobile App Development</h3>
-               <!-- Description -->
-               <p class="text-gray-500 text-sm leading-relaxed">Clean, scalable and robust web solutions for modern businesses.
-               </p>
-            </div>
-         </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="flex-none w-full sm:w-1/2 lg:w-1/3 px-3">
-          <div class="h-full bg-slate-200 duration-300 hover:scale-95 hover:shadow-xl hover:bg-red-100 rounded-2xl hover:rounded-xl">
-            <div class="card-body items-center text-center p-8">
-               <!-- Icon / Image -->
-               <div class="w-50 h-50 flex items-center justify-center rounded-full bg-primary/10 mb-2">
-                  <img src="./images/ui.png" alt="">
-               </div>
-               <!-- Title -->
-               <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
-               <!-- Description -->
-               <p class="text-gray-500 text-sm leading-relaxed">Clean, scalable and robust web solutions for modern businesses.
-               </p>
-            </div>
-         </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="flex-none w-full sm:w-1/2 lg:w-1/3 px-3">
-          <div class="h-full bg-slate-200 duration-300 hover:scale-95 hover:shadow-xl hover:bg-red-100 rounded-2xl hover:rounded-xl">
-            <div class="card-body items-center text-center p-8">
-               <!-- Icon / Image -->
-               <div class="w-50 h-50 flex items-center justify-center rounded-full bg-primary/10 mb-2">
-                  <img src="./images/erp.png" alt="">
-               </div>
-               <!-- Title -->
-               <h3 class="text-xl font-semibold mb-2">ERP Solutions</h3>
-               <!-- Description -->
-               <p class="text-gray-500 text-sm leading-relaxed">Clean, scalable and robust web solutions for modern businesses.
-               </p>
-            </div>
-         </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="flex-none w-full sm:w-1/2 lg:w-1/3 px-3">
-          <div class="h-full bg-slate-200 duration-300 hover:scale-95 hover:shadow-xl hover:bg-red-100 rounded-2xl hover:rounded-xl">
-            <div class="card-body items-center text-center p-8">
-               <!-- Icon / Image -->
-               <div class="w-50 h-50 flex items-center justify-center rounded-full bg-primary/10 mb-2">
-                  <img class="w-[90%]" src="./images/cloud.png" alt="">
-               </div>
-               <!-- Title -->
-               <h3 class="text-xl font-semibold mb-2">Cloud Service</h3>
-               <!-- Description -->
-               <p class="text-gray-500 text-sm leading-relaxed">Clean, scalable and robust web solutions for modern businesses.
-               </p>
-            </div>
-         </div>
-        </div>
-
-        <div class="flex-none w-full sm:w-1/2 lg:w-1/3 px-3">
-          <div class="h-full bg-slate-200 duration-300 hover:scale-95 hover:shadow-xl hover:bg-red-100 rounded-2xl hover:rounded-xl">
-            <div class="card-body items-center text-center p-8">
-               <!-- Icon / Image -->
-               <div class="w-50 h-50 flex items-center justify-center rounded-full bg-primary/10 mb-2">
-                  <img class="w-[80%]" src="./images/e-commerce.png" alt="">
-               </div>
-               <!-- Title -->
-               <h3 class="text-xl font-semibold mb-2">E-Commerce Solutions</h3>
-               <!-- Description -->
-               <p class="text-gray-500 text-sm leading-relaxed">Clean, scalable and robust web solutions for modern businesses.
-               </p>
-            </div>
-         </div>
-        </div>
-        
-
-      <!-- Right Arrow -->
-      <button id="next">
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden btn btn-ghost bg-orange-300 btn-circle text-blue-950 border-none" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
       </button>
     </div>
 
-    <!-- Dot Indicators -->
-    <div id="indicators" class="flex justify-center mt-6 space-x-2"></div>
-  </div>
-</section>
-
-
-<!-- Qoute or feedback -->
-
-<section class="flex items-center justify-center mb-20 mx-10 lg:mx-80">
-  <div class="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-gradient-to-r from-slate-900 to-slate-800">
-
-    <!-- Slides container -->
-      <div id="slides" class="flex transition-transform duration-700 ease-in-out">
-      
-         <!-- Slide 1 -->
-         <div class="min-w-full p-6">
-            <div class="card lg:card-side bg-base-100/10 border border-base-200 shadow-xl w-full text-white p-6">
-          <!-- Profile -->
-          <div class="card-body items-center lg:items-start lg:w-1/3">
-            <div class="avatar">
-              <div class="w-20 rounded-full ring ring-offset-base-100 ring-offset-2">
-                <img src="https://i.pravatar.cc/100?img=1" />
-              </div>
-            </div>
-            <h3 class="text-lg font-semibold mt-4">Elena Rodriguez</h3>
-            <p class="text-sm text-purple-400 font-bold">VP Operations, ScaleUp Co</p>
-            <p class="text-xs text-gray-400">ScaleUp</p>
-            <div class="rating mt-2">
-              <input type="radio" class="mask mask-star-2 bg-yellow-400" checked/>
-              <input type="radio" class="mask mask-star-2 bg-yellow-400" checked/>
-              <input type="radio" class="mask mask-star-2 bg-yellow-400" checked/>
-              <input type="radio" class="mask mask-star-2 bg-yellow-400" checked/>
-              <input type="radio" class="mask mask-star-2 bg-yellow-400" checked/>
-            </div>
-          </div>
-          <!-- Testimonial -->
-          <div class="card-body lg:w-2/3 relative">
-            <i class="fa-solid fa-quote-right text-4xl text-primary absolute -top-4 right-4 opacity-70"></i>
-            <p class="italic text-gray-200 mb-6">
-              TechOrbit IT helped elevate our digital presence to new heights. 
-              Their team is highly professional, responsive, and results-driven.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <div class="badge badge-outline badge-lg px-4 py-3">Full automation</div>
-              <div class="badge badge-outline badge-lg px-4 py-3">Strategic focus</div>
-              <div class="badge badge-outline badge-lg px-4 py-3">Team productivity</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-
-    <!-- Arrows -->
-    <button id="prev" class="btn btn-circle absolute left-4 top-1/2 -translate-y-1/2">❮</button>
-    <button id="next" class="btn btn-circle absolute right-4 top-1/2 -translate-y-1/2">❯</button>
-  </div>
-</section>
-   
-</section>
-
-
-   </main>
-
-      <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
-  <aside class="ml-1 lg:ml-40">
-    <div class="bg-slate-200 rounded-full p-2">
-      <img class="w-20" src="./images/logo.png" alt="">
-    </div>
-    <p class="text-2xl font-bold">Medigene IT</p>
-    <p><i class="fa-solid fa-location-dot"></i> 164, Meher Tower, Sonargaon Road, Dhaka.</p>
-  </aside>
-  <nav class="ml-1">
-    <h6 class="footer-title">Social</h6>
-    <div class="grid grid-flow-col gap-4">
-      <a>
-        <i class="fa-brands fa-square-facebook text-xl"></i>
-      </a>
-      <a>
-        <i class="fa-brands fa-linkedin text-xl"></i>
-      </a>
-      <a>
-        <i class="fa-brands fa-instagram text-xl"></i>
-      </a>
-      <a>
-         <i class="fa-regular fa-envelope text-xl"></i>
-      </a>
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden mt-2 bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 shadow-lg md:hidden">
+      <ul class="space-y-4">
+        <li><a href="#home" class="block">Home</a></li>
+        <li><a href="#features" class="block">Features</a></li>
+        <li><a href="#pricing" class="block">Pricing</a></li>
+        <li><a href="#contact" class="block">Contact</a></li>
+        <li><a href="#getstarted" class="btn btn-primary bg-orange-300 w-full rounded-full text-blue-950 border-none">Get Started</a></li>
+      </ul>
     </div>
   </nav>
-</footer>
 
- 
+
+  <!-- Hero with Background Video -->
+  <section id="home" class="relative mt-40 mb-10 flex items-center justify-center text-center overflow-hidden">
    
+    <div class="relative z-10 max-w-3xl px-6">
+      <h1 id="headline" class="text-5xl md:text-6xl font-bold leading-tight mb-6 
+                 bg-gradient-to-r from-[#59d18b] via-[#ecb372] to-[#73fae8] 
+                 bg-clip-text text-transparent animate-gradient-x bg-[length:150%_150%]">
+        Power Your Business with Smart Solutions
+      </h1>
+      <p id="head-tag" class="text-lg text-gray-200 mb-8">
+        We build modern web & mobile applications to power your business.
+      </p>
+      <div class="space-x-4">
+        <a href="#getstarted" class="btn hover:bg-indigo-500 hover:text-white bg-orange-300 text-blue-950 border-none rounded-full px-8">Get Started</a>
+        <a href="#features" class="btn btn-outline rounded-full px-8 text-white">Learn More</a>
+      </div>
+    </div>
+  </section>
+  <!-- statistics -->
+  <div class="flex flex-col lg:flex-row items-center justify-center pb-20">
+      <div class="card p-10 text-center">
+        <div class="text-3xl sm:text-4xl text-yellow-200 mb-2">🤝</div>
+        <p id="counter-partner" class="text-5xl font-extrabold text-yellow-200"></p>
+        <h2 class="text-2xl font-bold mb-4">Tech Partners</h2>
+      </div>
 
+      <div class="card p-10 text-center">
+        <p><i class="fa-solid fa-clock text-4xl text-yellow-200 text-center mb-2"></i></p>
+        <p id="counter-experience" class="text-5xl font-extrabold text-yellow-200"></p>
+        <h2 class="text-2xl font-bold mb-4">Year of Experiences</h2>
+      </div>
+
+      <div class="card p-10 text-center">
+        <p><i class="fa-solid fa-circle-check text-4xl text-yellow-200 text-center mb-2"></i></p>
+        <p id="counter" class="text-5xl font-extrabold text-yellow-200"></p>
+        <h2 class="text-2xl font-bold mb-4">Projects Completed</h2>
+      </div>
+    </div>
+</header>
+
+<main>
+<section id="why-choose-us" class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <!-- Headline -->
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 animate-slide-up" style="animation-delay: 0s;">
+      Why Choose Us
+    </h2>
+
+    <!-- Paragraph -->
+    <p class="text-gray-600 text-lg md:text-xl mb-8 animate-slide-up" style="animation-delay: 0.2s;">
+      We provide modern IT solutions to boost your business efficiency and growth.
+    </p>
+
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
+        <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up" style="animation-delay: 0.6s;">
+        <i class="fa-solid fa-globe text-5xl text-blue-600 mb-4 hover:rotate-45"></i>
+        <h3 class="text-xl font-semibold mb-2">Global Connectivity</h3>
+        <p class="text-gray-600">Direct routes to global networks for low latency and high performance.</p>
+      </div>
+      </div>
+
+      <div class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
+        <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up" style="animation-delay: 0.8s;">
+        <div class="text-4xl sm:text-5xl text-blue-600 mb-3 sm:mb-4 hover:rotate-45">🛡️</div>
+        <h3 class="text-xl font-semibold mb-2">Reliability & Uptime</h3>
+        <p class="text-gray-600">24/7 monitoring and redundant infrastructure for maximum uptime.</p>
+      </div>
+      </div>
+
+      <div class="transition-transform duration-300 hover:scale-105 hover:border-2 hover:border-slate-200 rounded-lg">
+        <div class="p-6 bg-white rounded-lg shadow-lg flex flex-col items-center text-center animate-slide-up" style="animation-delay: 1s;">
+        <div class="text-4xl sm:text-5xl text-blue-600 mb-3 sm:mb-4 hover:rotate-45">💰</div>
+        <h3 class="text-xl font-semibold mb-2">Cost-Effective Solutions</h3>
+        <p class="text-gray-600">Optimize costs without sacrificing speed, reliability, or quality.</p>
+      </div>
+    </div>
+      </div>
+  </div>
+</section>
+
+<section>
+  <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
+              rounded-xl bg-white p-6">
+    <div class="animate-slide-up flex flex-col lg:flex-row rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
+      <div class="w-1/2">
+        <img src="./images/app-dev (2).png" />
+      </div>
+      <div class="text-center flex flex-col items-center py-5">
+        <h2 class="text-2xl font-semibold text-center my-5">Web Development</h2>
+        <p>Modern, responsive websites built with cutting-edge technologies</p>
+        <p class="text-slate-500 text-center my-4">Custom web applications that scale with your business needs</p>
+        <div>
+          <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
+            <li>React</li>
+            <li>Next.js</li>
+            <li>TypeScript</li>
+            <li>Tailwind CSS</li>
+          </ol>
+        </div>
+        <a href="#getstarted" class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See Details</a>
+      </div>
+    </div>
+  </div>
+
+<div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
+              rounded-xl bg-white p-6">
+    <div class="animate-slide-up flex flex-col justify-center lg:flex-row-reverse rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
+      <div class="w-1/2 flex justify-center">
+        <img src="./images/app-dev (1).png" />
+      </div>
+      <div class="text-center flex flex-col items-center py-5">
+        <h2 class="text-2xl font-semibold text-center my-5">Mobile Application Development</h2>
+        <p>Native and cross-platform mobile apps for iOS and Android</p>
+        <p class="text-slate-500 text-center my-4">Engaging mobile experiences that connect with your users</p>
+        <div>
+          <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
+            <li>React Native</li>
+            <li>Flutter</li>
+            <li>Swift</li>
+            <li>Kotlin</li>
+          </ol>
+        </div>
+        <a href="#getstarted" class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
+              rounded-xl bg-white p-6">
+    <div class="animate-slide-up flex flex-col lg:flex-row rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
+      <div class="w-[40%]">
+        <img src="./images/api.png" />
+      </div>
+      <div class="text-center flex flex-col items-center py-5">
+        <h2 class="text-2xl font-semibold text-center my-5">API Development</h2>
+        <p>RESTful and GraphQL APIs for seamless data integration</p>
+        <p class="text-slate-500 text-center my-4">Robust backend systems that power your applications</p>
+        <div>
+          <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
+            <li>Node.js</li>
+            <li>GraphQL</li>
+            <li>REST</li>
+            <li>MongoDB</li>
+          </ol>
+        </div>
+        <a href="#getstarted" class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gap-3 transition-transform duration-300 ease-out hover:scale-105 
+              rounded-xl bg-white p-6">
+    <div class="animate-slide-up flex flex-col justify-center lg:flex-row-reverse rounded-xl lg:card-side shadow-lg lg:mx-80 px-20 border-2 border-slate-200 items-center">
+      <div class="w-1/2 flex justify-center">
+        <img src="./images/ui.png" />
+      </div>
+      <div class="text-center flex flex-col items-center py-5">
+        <h2 class="text-2xl font-semibold text-center my-5">UI/UX Design</h2>
+        <p>User-centered design that converts visitors into customers</p>
+        <p class="text-slate-500 text-center my-4">Beautiful interfaces that enhance user experience</p>
+        <div>
+          <ol class="flex flex-row gap-3 justify-center font-semibold my-6">
+            <li>Figma</li>
+            <li>Adobe XD</li>
+            <li>Sketch</li>
+            <li>Prototyping</li>
+          </ol>
+        </div>
+        <a href="#getstarted" class="btn bg-orange-300 rounded-full w-2/3 px-6 hidden md:inline-flex text-blue-950 border-none hover:bg-indigo-500 hover:text-white">See Details</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="animate-slide-up bg-white rounded-2xl p-6 sm:p-8 shadow-lg mx-10 lg:mx-80 my-10">
+  <h3 class="animate-slide-up text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8 text-gray-900">Additional Services</h3>
+    <div class="animate-slide-up flex flex-col lg:flex-row justify-around gap-4 sm:gap-6">
+            <div class="text-center transition-transform duration-300 hover:scale-105">
+              <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🔧</div>
+              <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Maintenance</h4>
+              <p class="text-xs sm:text-sm text-gray-600">$299/month</p>
+            </div>
+            <div class="text-center transition-transform duration-300 hover:scale-105">
+              <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">📊</div>
+              <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Analytics Setup</h4>
+              <p class="text-xs sm:text-sm text-gray-600">$499 one-time</p>
+            </div>
+            <div class="text-center transition-transform duration-300 hover:scale-105">
+              <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🚀</div>
+              <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Performance Audit</h4>
+              <p class="text-xs sm:text-sm text-gray-600">$799 one-time</p>
+            </div>
+            <div class="text-center transition-transform duration-300 hover:scale-105">
+              <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 hover:rotate-90">🎓</div>
+              <h4 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Training</h4>
+              <p class="text-xs sm:text-sm text-gray-600">$199/hour</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <section>
+    <div class="py-12 sm:py-16 lg:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="animate-slide-up text-center mb-12 sm:mb-16">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-gray-900">Get In Touch</h2>
+          <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            Ready to start your project? Let's discuss how we can help bring your vision to life.
+          </p>
+        </div>
+
+        <!-- form -->
+
+        <div class="animate-slide-up grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+          <div class="shadow-xl border-0 p-8 border-2 rounded-lg">
+            <h1 class="text-xl sm:text-2xl font-bold text-gray-900">Send us a message</h1>
+            <p id="feed-back" class="text-sm sm:text-base hidden">We'll get back to you within 24 hours</p>
+
+            <form class="space-y-4 sm:space-y-6">
+            <div class="flex flex-col lg:flex-row gap-4 my-3">
+              <div class="flex flex-col lg:flex-col w-1/2">
+                <p>Full Name*</p>
+                <input id="sender" type="text" class="text-sm sm:text-base border-2 rounded-md border-slate-200 h-10">
+              </div>
+              
+              <div class="flex flex-col lg:flex-col w-1/2">
+                <p>Email</p>
+                <input type="email" class="text-sm sm:text-base border-2 rounded-md border-slate-200 h-10">
+                
+              </div>
+
+            </div>
+            <div>
+            <h3>Company (Optional)</h3>
+            <input type="text" class="w-full h-10 text-sm sm:text-base border-2 rounded-md border-slate-200">
+            </div>
+
+            <div>
+              <h3>Message*</h3>
+            <textarea name="" class="w-full h-32 border-2 rounded-md border-slate-200 text-sm sm:text-base"></textarea>
+            </div>
+
+            <button id="send-message" type="submit" class="w-full bg-gradient-to-r from-[#0d4497] to-[#1E88E5] hover:from-[#0a3a7a] hover:to-[#1976D2] text-white py-2 sm:py-3 text-base sm:text-lg rounded-xl">Send Message</button>
+            
+            <div id="feedback"></div>
+          </form>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    
+  </section>
+
+
+
+
+
+</main>
+
+        <footer class="animate-slide-up mt-16 sm:mt-20 pt-8 sm:pt-12 border-t border-gray-200 max-w-7xl mx-auto px-4 sm:px-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+            <div class="sm:col-span-2 lg:col-span-1">
+              <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">Medigene IT</h3>
+              <p class="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">
+                Empowering businesses with innovative technology solutions since 2017.
+              </p>
+          <div class="flex flex-row gap-3">
+            <a><i class="fa-brands fa-square-facebook text-xl"></i></a>
+            <a><i class="fa-brands fa-linkedin text-xl"></i></a>
+            <a><i class="fa-brands fa-instagram text-xl"></i></a>
+            <a><i class="fa-regular fa-envelope text-xl"></i></a>
+          </div>
+        </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Services</h4>
+              <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
+                <li>Web Development</li>
+                <li>Mobile Apps</li>
+                <li>Cloud Solutions</li>
+                <li>UI/UX Design</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Company</h4>
+              <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
+                <li>About Us</li>
+                <li>Our Team</li>
+                <li>Careers</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-semibold text-gray-900 mb-3 sm:mb-4 text-sm sm:text-base">Support</h4>
+              <ul class="space-y-1 sm:space-y-2 text-gray-600 text-sm sm:text-base">
+                <li>Help Center</li>
+                <li>Documentation</li>
+                <li>Privacy Policy</li>
+                <li>Terms of Service</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="border-t border-gray-200 pt-6 sm:pt-8 text-center text-gray-600 text-sm sm:text-base">
+            <p>&copy; 2024 Medigene IT. All rights reserved.</p>
+          </div>
+        </footer>
+        
 <script>
-  const track = document.getElementById('track');
-  const nextBtn = document.getElementById('next');
-  const prevBtn = document.getElementById('prev');
-  const indicators = document.getElementById('indicators');
-
-  let index = 0;
-  const totalCards = track.children.length;
-
-  // Responsive visible card count
-  function getVisibleCards() {
-    if (window.innerWidth < 640) return 1; // mobile
-    if (window.innerWidth < 1024) return 2; // tablet
-    return 3; // desktop
-  }
-
-  function createIndicators() {
-    indicators.innerHTML = '';
-    const visible = getVisibleCards();
-    const totalSlides = totalCards - visible + 1;
-
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement('button');
-      dot.className =
-        'w-3 h-3 rounded-full bg-gray-400 opacity-50 hover:opacity-100 transition';
-      if (i === index) dot.classList.add('bg-primary', 'opacity-100');
-      dot.addEventListener('click', () => {
-        index = i;
-        updateSlide();
-      });
-      indicators.appendChild(dot);
+  let count = 0;
+  const counterEl = document.getElementById("counter");
+  const counter = setInterval(() => {
+    counterEl.textContent = ++count;
+    if (count === 100){
+      clearInterval(counter);
+      counterEl.textContent = count + "+"; 
     }
-  }
+  }, 20);
 
-  function updateIndicators() {
-    [...indicators.children].forEach((dot, i) => {
-      dot.className =
-        'w-3 h-3 rounded-full bg-gray-400 opacity-50 hover:opacity-100 transition';
-      if (i === index) dot.classList.add('bg-primary', 'opacity-100');
-    });
-  }
+  let counT = 0;
+  const counTerEl = document.getElementById("counter-partner");
+  const counTer = setInterval(() => {
+    counTerEl.textContent = ++counT;
+    if (counT == 20){
+      clearInterval(counTer);
+      counTerEl.textContent = counT + "+"; 
+    }
+  }, 60);
 
-  function updateSlide() {
-    const visible = getVisibleCards();
-    track.style.transform = `translateX(-${(100 / visible) * index}%)`;
-    updateIndicators();
-  }
+  let couNT = 0;
+  const couNTerEl = document.getElementById("counter-experience");
+  const couNTer = setInterval(() => {
+    couNTerEl.textContent = ++couNT;
+    if (couNT >= 7){
+      clearInterval(couNTer);
+      couNTerEl.textContent = couNT + "+"; 
+    }
+  }, 60);
 
-  function slide(direction = 1) {
-    const visible = getVisibleCards();
-    index += direction;
-    if (index > totalCards - visible) index = 0; // loop
-    if (index < 0) index = totalCards - visible;
-    updateSlide();
-  }
 
-  nextBtn.addEventListener('click', () => slide(1));
-  prevBtn.addEventListener('click', () => slide(-1));
-
-  // Autoplay every 3s
-  let autoSlide = setInterval(() => slide(1), 3000);
-
-  // Pause on hover
-  track.addEventListener('mouseenter', () => clearInterval(autoSlide));
-  track.addEventListener('mouseleave', () => {
-    autoSlide = setInterval(() => slide(1), 3000);
-  });
-
-  // Resize handler
-  window.addEventListener('resize', () => {
-    createIndicators();
-    updateSlide();
-  });
-
-  // Initial
-  createIndicators();
-  updateSlide();
-</script>
-<script>
-  window.addEventListener("load", () => {
-    document.querySelectorAll("[onload]").forEach(el => {
-      el.classList.remove("opacity-0","translate-y-5","translate-x-5");
-    });
-  });
 </script>
 <script src="./js/main.js"></script>
 </body>
