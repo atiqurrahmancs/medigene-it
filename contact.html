@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="./images/logo.png">
+   <title>Medigene IT</title>
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css"/>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+   <header>
+   <!-- Navbar -->
+   <div class="navbar bg-gradient-to-r from-[#0D47A1] via-[#2e6db6] to-[#1E88E5] text-white sticky top-0 z-50">
+      <!-- Navbar Start (Logo + Mobile Menu) -->
+      <div class="navbar-start">
+         <!-- Mobile Dropdown -->
+         <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </div>
+
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#596789] text-white rounded-box w-52">
+               <li><a class=">Home</a></li>
+               <li><a class="hover:text-blue-400 transition">About</a></li>
+               <li><a class="hover:text-blue-400 transition">Services</a></li>
+               <li><a class="hover:text-blue-400 transition">Products</a></li>
+               <li><a class="hover:text-blue-400 transition">Portfolio</a></li>
+               <li><a class="hover:text-blue-400 transition">Contact</a></li>
+            </ul>
+         </div>
+
+      <!-- Logo -->
+         <a href="index.html" class="flex items-center gap-2 text-xl font-bold">
+            <img src="./images/logo.png" alt="Medigene IT Logo" class="w-10 ml-10">
+            <span>Medigene IT</span>
+         </a>
+      </div>
+
+      <!-- Navbar Center (Desktop Menu) -->
+      <div class="navbar-center hidden lg:flex">
+         <ul class="menu menu-horizontal px-1">
+            <li><a href="./index.html" class="hover:text-blue-400 transition">Home</a></li>
+            <li><a href="./about.html" class="hover:text-blue-400 transition">About</a></li>
+            <li><a href="./service.html" class="hover:text-blue-400 transition">Services</a></li>
+            <li><a href="./product.html" class="hover:text-blue-400 transition">Products</a></li>
+            <li><a href="./team.html" class="hover:text-blue-400 transition">Teams</a></li>
+            <li><a href="./contact.html" class="hover:text-blue-400 transition">Contact</a></li>
+         </ul>
+      </div>
+
+      <!-- Navbar End (Button) -->
+      <div class="navbar-end">
+         <a class="btn bg-gradient-to-r from-[#FF6B6B] via-[#FF8E53] to-[#FFB74D]
+ text-white rounded-full px-6 border-0 hover:opacity-90 transition mr-10">Get Quote
+         </a>
+      </div>
+   </div>
+
+   <!-- Hero Section -->
+   <section class="bg-gradient-to-r from-[#0D47A1] via-[#1565C0] to-[#1E88E5] text-white flex flex-col lg:flex-row justify-around items-center">
+      <!-- Left Content -->
+      <div class="max-w-7xl mx-auto px-5 lg:px-10 py-24 flex flex-col items-center lg:items-start text-center lg:text-left">
+    
+         <!-- Headline -->
+         <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 opacity-0 translate-y-5 transition-all duration-1000 ease-out" onload="this.classList.remove('opacity-0','translate-y-5')">Driving Innovation. 
+         <br class="hidden md:block"> Delivering Solutions.
+         </h1>
+
+         <!-- Short text -->
+         <p class="text-base md:text-lg lg:text-xl text-gray-200 max-w-2xl mb-10
+         opacity-0 translate-y-5 transition-all duration-1000 ease-out delay-200" onload="this.classList.remove('opacity-0','translate-y-5')">We build modern web & mobile applications to power your business.
+         </p>
+
+       <!-- Buttons -->
+         <div class="flex flex-col sm:flex-row gap-4 opacity-0 translate-y-5 transition-all duration-1000 ease-out delay-500" onload="this.classList.remove('opacity-0','translate-y-5')">
+            <a href="#contact" class="btn bg-white text-blue-700 font-semibold border-0 px-8 rounded-full hover:bg-gray-200 transition">Get Started
+            </a>
+            <a href="#portfolio" class="btn bg-transparent border border-white px-8 rounded-full hover:bg-white hover:text-blue-800 transition">See Our Work
+            </a>
+         </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="mr-5 lg:mr-20 hidden lg:block opacity-0 translate-x-5 transition-all duration-1500 ease-out delay-700" onload="this.classList.remove('opacity-0','translate-x-5')">
+         <img src="./images/hero.png" alt="Hero Illustration" class="w-[200px] lg:w-[700px] max-w-full">
+      </div>
+   </section>
+   </header>
+
+   <main>
+
+   </main>
+
+   <footer>
+
+   </footer>
+   
+
+<script>
+  window.addEventListener("load", () => {
+    document.querySelectorAll("[onload]").forEach(el => {
+      el.classList.remove("opacity-0","translate-y-5","translate-x-5");
+    });
+  });
+</script>
+<script src="./js/main.js"></script>
+</body>
+</html>
