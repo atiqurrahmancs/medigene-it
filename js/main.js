@@ -1,6 +1,9 @@
 const sendMessage = document.getElementById('send-message');
 const popupContainer = document.getElementById("feedback");
 const nameInput = document.getElementById("sender"); // input field
+const senderMail = document.getElementById('sender-mail');
+const senderCompany = document.getElementById('sender-company');
+const senderMessage = document.getElementById('sender-message');
 
 sendMessage.addEventListener("click", function(event){
   event.preventDefault();
@@ -21,6 +24,10 @@ sendMessage.addEventListener("click", function(event){
     // popup close
   document.getElementById("close-popup").addEventListener("click", function () {
     popupContainer.innerHTML = ""; 
+    nameInput.value = '';
+    senderMail.value = '';
+    senderCompany.value = '';
+    senderMessage.value = '';
   });
 });
 
